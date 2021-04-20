@@ -16,20 +16,6 @@ namespace Employee_Time_Keeping_System
             Console.WriteLine("Enter your First Name:");
 			firstName = Console.ReadLine().ToUpper();
             
-            if(firstName == "James")
-            {
-                 
-            }
-
-            else
-            {
-                while(firstName.Equals("f"))
-                {
-                    Console.WriteLine("Enter your First Name:");
-			        firstName = Console.ReadLine().ToUpper();
-                }
-            }
-
             Console.WriteLine("Enter your Last Name:");
 			lastName = Console.ReadLine().ToUpper();
 			
@@ -42,14 +28,19 @@ namespace Employee_Time_Keeping_System
 			Console.WriteLine();
 
             Console.WriteLine("Submitted Successfully!");
+
+            
 			
-			Console.WriteLine("Employee Name:" + " " + lastName);
-			Console.WriteLine("Time-In:" + timeIn);
-			Console.WriteLine("Time-Out:" + timeOut);
+            if(firstName == "JAMES DAREL" && lastName == "ADVINCULA")
+            {
+			    Console.WriteLine("Employee Name:" + firstName + " " + lastName);
+			    Console.WriteLine("Time-In:" + timeIn);
+			    Console.WriteLine("Time-Out:" + timeOut);
 			
-			DateTime dateSubmitted = DateTime.Now;
-			Console.Write("Date Submitted:");
-			Console.WriteLine(dateSubmitted.ToString("dddd, dd MMMM yyyy HH:mm:ss"));
+			    DateTime dateSubmitted = DateTime.Now;
+			    Console.Write("Date Submitted:");
+			    Console.WriteLine(dateSubmitted.ToString("dddd, dd MMMM yyyy HH:mm:ss"));
+            }
         }
     }
 }
