@@ -14,9 +14,11 @@ namespace Employee_Time_Keeping_System
 		    DateTime timeInEntered;
 		    DateTime timeOutEntered;
 
-		    Console.WriteLine("------------------------------------------------");
+		    Console.WriteLine("|----------------------------------------------|");
 		    Console.WriteLine("|         Employee Time Keeping System         |");
-		    Console.WriteLine("------------------------------------------------");
+		    Console.WriteLine("|----------------------------------------------|");
+
+            Console.WriteLine();
 
 		    Console.WriteLine("Enter your First Name:");
 		    firstName = Console.ReadLine().ToUpper();
@@ -34,27 +36,24 @@ namespace Employee_Time_Keeping_System
 
 		    Console.WriteLine("Submitted Successfully!");
 
-		    var validTimeIn = DateTime.TryParse(timeIn, out timeInEntered);
+            Console.WriteLine("-----------------------------------------------");
 
-		    var validTimeOut = DateTime.TryParse(timeOut, out timeOutEntered);
+		    var validTimeIn = DateTime.TryParse(timeIn, out timeInEntered);
+            var validTimeOut = DateTime.TryParse(timeOut, out timeOutEntered);
 
 		    if(firstName == "JAMES DAREL" && lastName == "ADVINCULA")
 		    {
                 Console.WriteLine("Employee Name:" + firstName + " " + lastName);
 
-                if(validTimeIn)
+                if(validTimeIn && validTimeOut)
                 {
                     Console.WriteLine("Time-In:" + timeInEntered.ToShortTimeString());
-                }
-
-                else if(validTimeOut)
-                {
                     Console.WriteLine("Time-Out:" + timeOutEntered.ToShortTimeString());
                 }
-
+                
                 else
                 {
-                    Console.WriteLine("Error! Invalid Time Format.");
+                    Console.WriteLine("ERROR! Invalid Time Format.");
                 }
 
                 Console.WriteLine();
