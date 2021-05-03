@@ -70,7 +70,8 @@ namespace Employee_Time_Keeping_System
 
             Console.WriteLine("-----------------------------------------------");
 
-            Console.WriteLine("               Weekly Attendance               ");
+            Console.WriteLine("         Weekly Attendance         ");
+
             var attendanceLogs = new List<string>()
             {"05/03/21 - In: 9:00am - Out: 5:00pm", "05/02/21 - In: 8:45am - Out: 5:00pm", 
              "04/30/21 - In: 9:05am - Out: 5:06pm", "04/29/21 - In: 8:55am - Out: 5:04pm", 
