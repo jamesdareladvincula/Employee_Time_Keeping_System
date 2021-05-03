@@ -20,16 +20,16 @@ namespace Employee_Time_Keeping_System
 
             Console.WriteLine();
 
-		    Console.WriteLine("Enter your First Name:");
+		    Console.Write("Enter your First Name:");
 		    firstName = Console.ReadLine().ToUpper();
 
-		    Console.WriteLine("Enter your Last Name:");
+		    Console.Write("Enter your Last Name:");
 		    lastName = Console.ReadLine().ToUpper();
 
-		    Console.WriteLine("Enter Time-In:");
+		    Console.Write("Enter Time-In:");
 		    timeIn = Console.ReadLine();
 
-		    Console.WriteLine("Enter Time-Out:");
+		    Console.Write("Enter Time-Out:");
 		    timeOut = Console.ReadLine();
 
 		    Console.WriteLine();
