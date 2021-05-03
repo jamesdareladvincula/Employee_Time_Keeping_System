@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Employee_Time_Keeping_System
 {
@@ -12,10 +13,13 @@ namespace Employee_Time_Keeping_System
             string timeOut;
             DateTime timeInEntered;
             DateTime timeOutEntered;
+            DateTime dateSubmitted;
             
-            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("|----------------------------------------------|");
             Console.WriteLine("|         Employee Time Keeping System         |");
-            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("|----------------------------------------------|");
+
+            Console.WriteLine();
 			
             Console.WriteLine("Enter your First Name:");
 			firstName = Console.ReadLine().ToUpper();
@@ -23,45 +27,44 @@ namespace Employee_Time_Keeping_System
             Console.WriteLine("Enter your Last Name:");
 			lastName = Console.ReadLine().ToUpper();
 			
-			Console.WriteLine("Enter Time-In:");
+            Console.WriteLine("Enter Time-In:");
 			timeIn = Console.ReadLine();
-			
-			Console.WriteLine("Enter Time-Out:");
-			timeOut = Console.ReadLine();
-			
-			Console.WriteLine();
+
+            Console.WriteLine("Enter Time-Out:");
+            timeOut = Console.ReadLine();
+
+            Console.WriteLine();
 
             Console.WriteLine("Submitted Successfully!");
 
-            var validTimeIn = DateTime.TryParse(timeIn, out timeInEntered);
+            Console.WriteLine("---------------------------------------------");
 
+            Console.WriteLine("Employee Name:" + firstName + " " + lastName);
+
+			var validTimeIn = DateTime.TryParse(timeIn, out timeInEntered);
             var validTimeOut = DateTime.TryParse(timeOut, out timeOutEntered);
-			
-            if(firstName == "JAMES DAREL" && lastName == "ADVINCULA")
+            
+            if(validTimeIn)
             {
-			    Console.WriteLine("Employee Name:" + firstName + " " + lastName);
-			    
-                if(validTimeIn)
-                {
-                    Console.WriteLine("Time-In:" + timeInEntered.ToShortTimeString());
-                }
-
-                else if(validTimeOut)
-                {
-                    Console.WriteLine("Time-Out:" + timeOutEntered.ToShortTimeString());
-                }
-
-                else
-                {
-                    Console.WriteLine("Error! Invalid Time Format.");
-                }
-			    
-                Console.WriteLine();
-			
-			    DateTime dateSubmitted = DateTime.Now;
-			    Console.Write("Date Submitted:");
-			    Console.WriteLine(dateSubmitted.ToString("dddd, dd MMMM yyyy HH:mm:ss"));
+                Console.WriteLine("Time-In:" + timeInEntered);
             }
+
+            else if(validTimeOut)
+            {
+                Console.WriteLine("Time-Out:" + timeOutEntered);
+            }
+
+            else
+            {
+                Console.WriteLine($"{timeIn} is not a valid date string");
+            } 
+            
+            Console.WriteLine();
+			
+			dateSubmitted = DateTime.Now;
+			
+            Console.Write("Date Submitted:");
+			Console.WriteLine(dateSubmitted.ToString("dddd, dd MMMM yyyy HH:mm:ss"));
         }
     }
 }
