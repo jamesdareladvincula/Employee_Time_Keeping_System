@@ -99,6 +99,8 @@ namespace Employee_Time_Keeping_System
 
             static void ViewAttendance()
             {
+                Console.WriteLine("-----------------------------------------------");
+
                 Console.WriteLine("         Attendance Log         ");
 
                 var attendanceLogs = new List<string>()
@@ -114,6 +116,8 @@ namespace Employee_Time_Keeping_System
             }
             static void ExitProgram()
             {
+                Console.WriteLine("-----------------------------------------------");
+
                 Console.WriteLine("|----------------------------------------------|");
 		        Console.WriteLine("|                  Thank You!                  |");
 		        Console.WriteLine("|----------------------------------------------|");
