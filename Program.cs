@@ -74,17 +74,14 @@ namespace Employee_Time_Keeping_System
 
             var attendanceLogs = new List<string>()
             {"05/03/21 - In: 9:00am - Out: 5:00pm", "05/02/21 - In: 8:45am - Out: 5:00pm", 
-             "04/30/21 - In: 9:05am - Out: 5:06pm", "04/29/21 - In: 8:55am - Out: 5:04pm", 
-             "04/28/21 - In: 9:00am - Out: 6:00pm", "04/27/21 - In: 9:07am - Out: 5:00pm", 
-             "04/26/21 - In: 8:45am - Out: 5:15pm"};
+             "05/01/21 -         Holiday         ", "04/30/21 - In: 9:05am - Out: 5:06pm", 
+             "04/29/21 - In: 8:55am - Out: 5:04pm", "04/28/21 - In: 9:00am - Out: 6:00pm", 
+             "04/27/21 - In: 9:07am - Out: 5:00pm"};
 
-            Console.WriteLine(attendanceLogs[0]);
-            Console.WriteLine(attendanceLogs[1]);
-            Console.WriteLine(attendanceLogs[2]);
-            Console.WriteLine(attendanceLogs[3]);
-            Console.WriteLine(attendanceLogs[4]);
-            Console.WriteLine(attendanceLogs[5]);
-            Console.WriteLine(attendanceLogs[6]);
+            foreach(var attendance in attendanceLogs)
+            {
+                Console.WriteLine($"{attendance}");
+            }
         }
     }
 }
